@@ -27,8 +27,6 @@ public class CameraController : MonoBehaviour
         rotationY -= Input.GetAxis("Mouse Y") * sesitivity;
 
         rotationY = Mathf.Clamp(rotationY, -90f, 90f);
-        // 좌우로 고정시켜주는 코드 미구현 (어떻게 구현하면 좋을까요?)
-
         transform.localEulerAngles = new Vector3 (rotationY, rotationX, 0);
     }
 
