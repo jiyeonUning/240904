@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
         Vector3 dir = new Vector3(x, 0, z);
         if (dir == Vector3.zero) return;
 
-        transform.Translate(dir.normalized * moveSpeed * Time.deltaTime, Space.World);
+        transform.Translate(dir.normalized * moveSpeed * Time.deltaTime, Space.Self);
         transform.rotation = Quaternion.LookRotation(dir);
     }
 }
